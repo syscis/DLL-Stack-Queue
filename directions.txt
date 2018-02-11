@@ -1,0 +1,79 @@
+Objectives
+
+    Practice implementing, unit testing, and using a Stack data structure.
+    Practice implementing, unit testing, and using a Queue data structure.
+    Practice implementing, unit testing, and using a Doubly Linked List (DLL) data structure.
+    Practice commenting code to build an Application Programming Interface (API) - see pep-0257, tut-docstrings
+    Practice writing unit tests
+    Testing, graphing, and analyzing the time complexity of your implementations with Matplotlib.
+
+Resources - Lab3.zip / dictionary - prior to starting this lab from the command line run
+python -m pip install pythonds
+python -m pip install matplotlib
+The -m switch should not be necessary on you personal laptop, if you have a Mac substitute pip3 for pip and run the command in Terminal
+
+Procedure
+
+    In a module named cStack, create a Stack using your DLL as the internal data structure, the first line following the import statements should update the __author__ with your last name.
+    Note: Do not base your Stack on the Python list, instead use the Doubly Linked List provided in Resources above.
+
+        Your Stack should have one instance variable, a stack, and standard Stack methods is_empty, size, push, pop, and peek.
+
+        (20 pts.) Your cStack.Stack class should pass all of the provided unit tests.
+
+        (5 pts.) Running help on Stack from the PyCharm Python console should prduce this output or better.
+
+    In a module named cQueue create a Queue using your DLL as the internal data structure, the first line following the import statements should update the __author__ with your last name.
+
+        Your Queue should have one instance variable, a queue, and standard Queue methods is_empty, size, enqueue, and dequeue.
+
+        (20 pts.) Your cQueue.Queue class should pass all of the provided unit tests.
+
+        (5 pts.) Running help on Queue from the PyCharm Python console should prduce this output or better.
+    DoublyLinkedList:
+
+        (5 pts.) Write a method indexOf(value) which returns the index within the linked list of the node with that value. Return -1 if not found.
+
+        (5 pts.) Write a method insertAt(index, value) that will create a node (with that value) and insert the node at that index.
+        (5 pts.) Write a method in the DoublyLinkedList class, removeAt(index) which removes the node at that index. It should return the value of the removed node.
+        Note the main function runs only if __name__ is '__main__'. Once the three functions are added, running it should print out
+        5 2 7 25 -4
+        5 2 25 -4
+            The item removed was 7.
+        2 25 -4
+            The item removed was 5.
+        2 25
+            The item removed was -4.
+        2 25 
+
+        1 2 4 25 35
+        The value at index 0 is 1 for which indexOf(1) returned 0.
+        The value at index 1 is 2 for which indexOf(2) returned 1.
+        The value at index 2 is 4 for which indexOf(4) returned 2.
+        The value at index 3 is 25 for which indexOf(25) returned 3.
+        The value at index 4 is 35 for which indexOf(35) returned 4.
+        indexOf(-10) is -1
+        The dll size is 5.
+
+        (5 pts.) Create a test_DoublyLinkedList module to test the three new methods in the DoublyLinkedList.
+
+    Create a separate module, Lab3.py,  that when run produces two outputs one suitable for a spreadsheet, and the other suitable for the console. Use pip to install pythonds.
+        (10 pts.)  Write a function that returns a list object containing the words in this dictionary (download this file to your project folder). Print to the console the number of words read into the list.
+
+        (10 pts.) Show the individual time performances (using scientific notation showing 3 significant digits {:.3G} for the console of both your Queue and an instance of the Queue found in the package pythonds.basic by timing the enqueuing of n words for n from 20,000 to 181,000 in steps of 20,000 using the list object created in the previous step (4.a). Then time dequeuing those n items from both queues. Repeat for the nine iterations. Print this to the console and write to a single csv file. Sample printed output follows.
+
+        Completed reading in 183,718 words to list.
+        N            dll enqueue                 pyds enqueue                 dll dequeue                 pyds dequeue
+
+         20,000 0.025 			0.0845 			0.0134 			0.00405
+         40,000 0.058 			0.353 			0.0263 			0.00817
+         60,000 0.0796 			0.794 			0.0392 			0.0121
+         80,000 0.118 			1.44 			0.0506 			0.017
+        100,000 0.148 			2.24 			0.0654 			0.0214
+        120,000 0.195 			3.47 			0.0789 			0.0458
+        140,000 0.222 			4.94 			0.101 			0.0408
+        160,000 0.248 			5.6 			0.103 			0.034
+        180,000 0.296 			7.02 			0.161 			0.0989
+
+        (10 pts.) Graph the four plots using Matplotlib in your Lab3.py module. Below is a screenshot of the program running with output & graph. You do not need to make a .xlsx graph.
+        mouse over to see sample
