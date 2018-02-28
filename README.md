@@ -1,1 +1,1 @@
-Check instructions.txt for an outline of the projecct
+Check directions.txt for an outline of the projecct
